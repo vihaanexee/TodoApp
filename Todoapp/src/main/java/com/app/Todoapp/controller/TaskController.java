@@ -11,9 +11,9 @@ import java.util.List;
 @Controller
 @RequestMapping("/tasks")
 public class TaskController {
-    private final TaskService taskService;
+    private final TaskService taskService; //it is the reference to spring managed instance requires the consturctor
 
-    public TaskController(TaskService taskService) {
+    public TaskController(TaskService taskService) {  //constructor of taskservice to use the services such as add delete and toggle
         this.taskService = taskService;
     }
 

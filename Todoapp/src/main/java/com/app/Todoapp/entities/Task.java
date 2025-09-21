@@ -7,8 +7,8 @@ import jakarta.persistence.Id;
 import lombok.Data;
 import org.springframework.boot.autoconfigure.web.WebProperties;
 
-@Entity
-@Data
+@Entity // makes the class as a table in the database using jpa
+@Data //lombok method very useful as it creates getters and setters and some predifined methods  check the features here https://projectlombok.org/features/Data
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
