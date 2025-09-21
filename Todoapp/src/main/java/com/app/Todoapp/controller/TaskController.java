@@ -30,13 +30,13 @@ public class TaskController {
         return "redirect:/tasks";
     }
 
-    @GetMapping("/{id}/delete")  // Fixed the path
+    @GetMapping("/{id}/delete")
     public String deleteTask(@PathVariable Long id) {
         taskService.deleteTask(id);
         return "redirect:/tasks";
     }
 
-    @GetMapping("/{id}/toggle")  // Fixed the path
+    @GetMapping("/{id}/toggle")
     public String toggleTask(@PathVariable Long id) {
         taskService.toggleTask(id);
         return "redirect:/tasks";
